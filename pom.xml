@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.biglikuryer</groupId>
-    <artifactId>BigliPlus</artifactId>
+    <artifactId>bigliplus</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>Bigli Plus</name>
-    <description>Bigli Plus</description>
+    <name>bigliplus</name>
+    <description>bigliplus</description>
     <properties>
         <java.version>17</java.version>
     </properties>
