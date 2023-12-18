@@ -38,6 +38,8 @@ public class Order {
 
     private String deliveryLength;
 
+    private String deliveryTime;
+
     private String description;
 
     private Double price;

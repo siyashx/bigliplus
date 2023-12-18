@@ -29,6 +29,8 @@ public class OrderDto {
 
     private String deliveryLength;
 
+    private String deliveryTime;
+
     private String description;
 
     private Double price;

@@ -82,6 +82,10 @@ public class OrderServiceImpl implements OrderServiceInter {
                 order.setDeliveryLength(orderDto.getDeliveryLength());
             }
 
+            if (orderDto.getDeliveryTime() != null) {
+                order.setDeliveryTime(orderDto.getDeliveryTime());
+            }
+
             if (orderDto.getDescription() != null) {
                 order.setDescription(orderDto.getDescription());
             }
