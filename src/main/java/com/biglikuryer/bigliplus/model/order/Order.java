@@ -28,6 +28,8 @@ public class Order {
 
     private String status;
 
+    private String customerPhoneNumber;
+
     private String pickupLocation;
 
     private String toLocation;
