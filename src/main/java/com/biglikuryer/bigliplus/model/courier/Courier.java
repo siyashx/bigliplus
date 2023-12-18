@@ -33,6 +33,8 @@ public class Courier {
 
     private Boolean currentlyDelivery;
 
+    private String map;
+
     private Boolean online;
 
     private String createdDate;

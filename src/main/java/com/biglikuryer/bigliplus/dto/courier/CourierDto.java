@@ -26,6 +26,8 @@ public class CourierDto {
 
     private Boolean currentlyDelivery;
 
+    private String map;
+
     private Boolean online;
 
     private String createdDate;

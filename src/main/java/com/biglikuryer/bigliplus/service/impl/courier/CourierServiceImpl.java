@@ -80,6 +80,10 @@ public class CourierServiceImpl implements CourierServiceInter {
             if (courierDto.getCurrentlyDelivery() != null) {
                 courier.setCurrentlyDelivery(courierDto.getCurrentlyDelivery());
             }
+
+            if (courierDto.getMap() != null) {
+                courier.setMap(courierDto.getMap());
+            }
             if (courierDto.getOnline() != null) {
                 courier.setOnline(courierDto.getOnline());
             }
