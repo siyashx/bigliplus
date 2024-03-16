@@ -76,6 +76,10 @@ public class CourierServiceImpl implements CourierServiceInter {
                 courier.setMotoPhoto(courierDto.getMotoPhoto());
             }
 
+            if (courierDto.getMotoDescription() != null) {
+                courier.setMotoDescription(courierDto.getMotoDescription());
+            }
+
             if (courierDto.getPassword() != null) {
                 courier.setPassword(courierDto.getPassword());
             }

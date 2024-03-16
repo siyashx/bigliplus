@@ -28,6 +28,8 @@ public class Courier {
 
     private String motoPhoto;
 
+    private String motoDescription;
+
     @Column(nullable = false)
     private String password;
 

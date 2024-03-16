@@ -22,6 +22,8 @@ public class CourierDto {
 
     private String motoPhoto;
 
+    private String motoDescription;
+
     private String password;
 
     private String latLong;
