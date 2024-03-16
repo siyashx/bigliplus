@@ -32,6 +32,8 @@ public class CourierDto {
 
     private String createdDate;
 
+    private Boolean registerRequest;
+
     @JsonProperty("isDisable")
     private Boolean isDisable;
 }

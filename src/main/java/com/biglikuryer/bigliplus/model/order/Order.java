@@ -6,6 +6,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Table(name = "orders")
 @Entity
 @NoArgsConstructor
@@ -33,6 +35,14 @@ public class Order {
     private String pickupLocation;
 
     private String toLocation;
+
+    private String orderType;
+
+    private String cancelledCouriers;
+
+    private String cancelledDescription;
+
+    private Boolean orderLock;
 
     private String pickupLocationLatLong;
 

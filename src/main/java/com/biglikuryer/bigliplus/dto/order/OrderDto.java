@@ -5,6 +5,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
@@ -18,6 +20,14 @@ public class OrderDto {
     private Long courierId;
 
     private String status;
+
+    private String orderType;
+
+    private String cancelledCouriers;
+
+    private String cancelledDescription;
+
+    private Boolean orderLock;
 
     private String customerPhoneNumber;
 

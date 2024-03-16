@@ -23,6 +23,8 @@ public class Restaurant {
 
     private String name;
 
+    private String tempName;
+
     @Column(unique = true, nullable = false)
     private String phoneNumber;
 

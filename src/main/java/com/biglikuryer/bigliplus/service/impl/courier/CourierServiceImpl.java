@@ -92,6 +92,10 @@ public class CourierServiceImpl implements CourierServiceInter {
                 courier.setCreatedDate(courierDto.getCreatedDate());
             }
 
+            if (courierDto.getRegisterRequest() != null) {
+                courier.setRegisterRequest(courierDto.getRegisterRequest());
+            }
+
             if (courierDto.getIsDisable() != null) {
                 courier.setIsDisable(courierDto.getIsDisable());
             }

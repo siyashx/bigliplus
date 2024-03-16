@@ -78,6 +78,22 @@ public class OrderServiceImpl implements OrderServiceInter {
                 order.setPickupLocationLatLong(orderDto.getPickupLocationLatLong());
             }
 
+            if (orderDto.getOrderType() != null) {
+                order.setOrderType(orderDto.getOrderType());
+            }
+
+            if (orderDto.getCancelledCouriers() != null) {
+                order.setCancelledCouriers(orderDto.getCancelledCouriers());
+            }
+
+            if (orderDto.getCancelledDescription() != null) {
+                order.setCancelledDescription(orderDto.getCancelledDescription());
+            }
+
+            if (orderDto.getOrderLock() != null) {
+                order.setOrderLock(orderDto.getOrderLock());
+            }
+
             if (orderDto.getToLocationLatLong() != null) {
                 order.setToLocationLatLong(orderDto.getToLocationLatLong());
             }

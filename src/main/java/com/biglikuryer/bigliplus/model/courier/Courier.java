@@ -39,6 +39,8 @@ public class Courier {
 
     private String createdDate;
 
+    private Boolean registerRequest;
+
     @JsonProperty("isDisable")
     private Boolean isDisable;
 }

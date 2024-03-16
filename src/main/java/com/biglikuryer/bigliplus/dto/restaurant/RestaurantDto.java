@@ -18,11 +18,14 @@ public class RestaurantDto {
 
     private String name;
 
+    private String tempName;
+
     private String phoneNumber;
 
     private String password;
 
     private String createdDate;
+
 
     @JsonProperty("isDisable")
     private Boolean isDisable;
