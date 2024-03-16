@@ -71,6 +71,11 @@ public class CourierServiceImpl implements CourierServiceInter {
             if (courierDto.getPhoneNumber() != null) {
                 courier.setPhoneNumber(courierDto.getPhoneNumber());
             }
+
+            if (courierDto.getMotoPhoto() != null) {
+                courier.setMotoPhoto(courierDto.getMotoPhoto());
+            }
+
             if (courierDto.getPassword() != null) {
                 courier.setPassword(courierDto.getPassword());
             }

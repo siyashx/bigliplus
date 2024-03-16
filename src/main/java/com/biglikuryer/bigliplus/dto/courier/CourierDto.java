@@ -20,6 +20,8 @@ public class CourierDto {
 
     private String phoneNumber;
 
+    private String motoPhoto;
+
     private String password;
 
     private String latLong;

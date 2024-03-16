@@ -26,6 +26,8 @@ public class Courier {
     @Column(unique = true, nullable = false)
     private String phoneNumber;
 
+    private String motoPhoto;
+
     @Column(nullable = false)
     private String password;
 
