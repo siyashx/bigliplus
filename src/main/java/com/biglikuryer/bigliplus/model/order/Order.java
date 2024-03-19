@@ -1,5 +1,6 @@
 package com.biglikuryer.bigliplus.model.order;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -60,5 +61,6 @@ public class Order {
 
     private String createdTime;
 
-
+    @JsonProperty("isDisable")
+    private String isDisable;
 }

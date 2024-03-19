@@ -122,6 +122,10 @@ public class OrderServiceImpl implements OrderServiceInter {
                 order.setCreatedTime(orderDto.getCreatedTime());
             }
 
+            if (orderDto.getIsDisable() != null) {
+                order.setIsDisable(orderDto.getIsDisable());
+            }
+
             order = orderRepository.save(order);
             return modelMapper.map(order, OrderDto.class);
 

@@ -1,5 +1,6 @@
 package com.biglikuryer.bigliplus.dto.order;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -50,4 +51,7 @@ public class OrderDto {
     private String createdDate;
 
     private String createdTime;
+
+    @JsonProperty("isDisable")
+    private String isDisable;
 }
