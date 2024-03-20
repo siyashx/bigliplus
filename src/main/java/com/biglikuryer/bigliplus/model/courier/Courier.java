@@ -45,6 +45,8 @@ public class Courier {
 
     private Boolean registerRequest;
 
+    private String deviceId;
+
     @JsonProperty("isDisable")
     private Boolean isDisable;
 }

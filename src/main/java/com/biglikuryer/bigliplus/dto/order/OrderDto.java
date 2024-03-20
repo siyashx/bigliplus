@@ -6,8 +6,6 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.List;
-
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
@@ -43,6 +41,8 @@ public class OrderDto {
     private String deliveryLength;
 
     private String deliveryTime;
+
+    private String walkTime;
 
     private String description;
 

@@ -7,8 +7,6 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.List;
-
 @Table(name = "orders")
 @Entity
 @NoArgsConstructor
@@ -52,6 +50,8 @@ public class Order {
     private String deliveryLength;
 
     private String deliveryTime;
+
+    private String walkTime;
 
     private String description;
 

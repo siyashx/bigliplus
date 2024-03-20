@@ -85,6 +85,10 @@ public class RestaurantServiceImpl implements RestaurantServiceInter {
                 restaurant.setCreatedDate(restaurantDto.getCreatedDate());
             }
 
+            if (restaurantDto.getDeviceId() != null) {
+                restaurant.setDeviceId(restaurantDto.getDeviceId());
+            }
+
             if (restaurantDto.getIsDisable() != null) {
                 restaurant.setIsDisable(restaurantDto.getIsDisable());
             }

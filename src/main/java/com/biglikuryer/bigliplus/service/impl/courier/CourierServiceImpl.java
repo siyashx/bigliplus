@@ -105,6 +105,10 @@ public class CourierServiceImpl implements CourierServiceInter {
                 courier.setRegisterRequest(courierDto.getRegisterRequest());
             }
 
+            if (courierDto.getDeviceId() != null) {
+                courier.setDeviceId(courierDto.getDeviceId());
+            }
+
             if (courierDto.getIsDisable() != null) {
                 courier.setIsDisable(courierDto.getIsDisable());
             }

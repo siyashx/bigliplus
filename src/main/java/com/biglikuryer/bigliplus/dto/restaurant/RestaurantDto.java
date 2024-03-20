@@ -26,6 +26,7 @@ public class RestaurantDto {
 
     private String createdDate;
 
+    private String deviceId;
 
     @JsonProperty("isDisable")
     private Boolean isDisable;

@@ -38,6 +38,8 @@ public class CourierDto {
 
     private Boolean registerRequest;
 
+    private String deviceId;
+
     @JsonProperty("isDisable")
     private Boolean isDisable;
 }
