@@ -74,10 +74,6 @@ public class OrderServiceImpl implements OrderServiceInter {
                 order.setToLocation(orderDto.getToLocation());
             }
 
-            if (orderDto.getPickupLocationLatLong() != null) {
-                order.setPickupLocationLatLong(orderDto.getPickupLocationLatLong());
-            }
-
             if (orderDto.getOrderType() != null) {
                 order.setOrderType(orderDto.getOrderType());
             }
@@ -88,14 +84,6 @@ public class OrderServiceImpl implements OrderServiceInter {
 
             if (orderDto.getCancelledDescription() != null) {
                 order.setCancelledDescription(orderDto.getCancelledDescription());
-            }
-
-            if (orderDto.getOrderLock() != null) {
-                order.setOrderLock(orderDto.getOrderLock());
-            }
-
-            if (orderDto.getToLocationLatLong() != null) {
-                order.setToLocationLatLong(orderDto.getToLocationLatLong());
             }
 
             if (orderDto.getDeliveryLength() != null) {
@@ -110,8 +98,8 @@ public class OrderServiceImpl implements OrderServiceInter {
                 order.setWalkTime(orderDto.getWalkTime());
             }
 
-            if (orderDto.getDescription() != null) {
-                order.setDescription(orderDto.getDescription());
+            if (orderDto.getNeedCourierPrice() != null) {
+                order.setNeedCourierPrice(orderDto.getNeedCourierPrice());
             }
 
             if (orderDto.getPrice() != null) {

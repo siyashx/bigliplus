@@ -26,17 +26,11 @@ public class OrderDto {
 
     private String cancelledDescription;
 
-    private Boolean orderLock;
-
     private String customerPhoneNumber;
 
     private String pickupLocation;
 
     private String toLocation;
-
-    private String pickupLocationLatLong;
-
-    private String toLocationLatLong;
 
     private String deliveryLength;
 
@@ -44,7 +38,7 @@ public class OrderDto {
 
     private String walkTime;
 
-    private String description;
+    private String needCourierPrice;
 
     private Double price;
 

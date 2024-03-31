@@ -41,19 +41,13 @@ public class Order {
 
     private String cancelledDescription;
 
-    private Boolean orderLock;
-
-    private String pickupLocationLatLong;
-
-    private String toLocationLatLong;
-
     private String deliveryLength;
 
     private String deliveryTime;
 
     private String walkTime;
 
-    private String description;
+    private String needCourierPrice;
 
     private Double price;
 
