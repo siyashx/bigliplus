@@ -31,7 +31,11 @@ public class Order {
 
     private String customerPhoneNumber;
 
+    private String pickupLocationTitle;
+
     private String pickupLocation;
+
+    private String toLocationTitle;
 
     private String toLocation;
 
