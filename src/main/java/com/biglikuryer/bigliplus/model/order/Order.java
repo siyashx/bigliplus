@@ -29,8 +29,6 @@ public class Order {
 
     private String status;
 
-    private String customerPhoneNumber;
-
     private String pickupLocationTitle;
 
     private String pickupLocation;

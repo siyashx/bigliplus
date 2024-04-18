@@ -26,8 +26,6 @@ public class OrderDto {
 
     private String cancelledDescription;
 
-    private String customerPhoneNumber;
-
     private String pickupLocationTitle;
 
     private String pickupLocation;

@@ -62,9 +62,6 @@ public class OrderServiceImpl implements OrderServiceInter {
                 order.setStatus(orderDto.getStatus());
             }
 
-            if (orderDto.getCustomerPhoneNumber() != null) {
-                order.setCustomerPhoneNumber(orderDto.getCustomerPhoneNumber());
-            }
             if (orderDto.getPickupLocationTitle() != null) {
                 order.setPickupLocationTitle(orderDto.getPickupLocationTitle());
             }
