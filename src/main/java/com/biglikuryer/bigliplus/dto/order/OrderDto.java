@@ -16,7 +16,7 @@ public class OrderDto {
 
     private Long restaurantId;
 
-    private Long courierId;
+    private String courierId;
 
     private String status;
 

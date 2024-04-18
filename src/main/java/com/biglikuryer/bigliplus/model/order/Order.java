@@ -25,7 +25,7 @@ public class Order {
     private Long restaurantId;
 
     @Column(name = "courier_id")
-    private Long courierId;
+    private String courierId;
 
     private String status;
 
