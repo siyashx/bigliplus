@@ -15,6 +15,10 @@ public class AdminNotificationDto {
 
     private String userId;
 
+    private String reportPanel;
+
+    private Boolean isReport;
+
     private String text;
 
 }

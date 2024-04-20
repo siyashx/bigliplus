@@ -20,5 +20,9 @@ public class AdminNotification {
 
     private String userId;
 
+    private String reportPanel;
+
+    private Boolean isReport;
+
     private String text;
 }
