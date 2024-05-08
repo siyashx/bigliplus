@@ -23,6 +23,8 @@ public class Restaurant {
 
     private String name;
 
+    private String gender;
+
     private String tempName;
 
     @Column(unique = true, nullable = false)
@@ -30,6 +32,8 @@ public class Restaurant {
 
     @Column(nullable = false)
     private String password;
+
+    private Boolean fakeOrderAttempt;
 
     private String createdDate;
 

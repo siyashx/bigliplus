@@ -18,11 +18,15 @@ public class RestaurantDto {
 
     private String name;
 
+    private String gender;
+
     private String tempName;
 
     private String phoneNumber;
 
     private String password;
+
+    private Boolean fakeOrderAttempt;
 
     private String createdDate;
 

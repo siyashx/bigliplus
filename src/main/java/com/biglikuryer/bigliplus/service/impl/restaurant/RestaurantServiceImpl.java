@@ -74,11 +74,19 @@ public class RestaurantServiceImpl implements RestaurantServiceInter {
                 restaurant.setTempName(restaurantDto.getTempName());
             }
 
+            if (restaurantDto.getGender() != null) {
+                restaurant.setGender(restaurantDto.getGender());
+            }
+
             if (restaurantDto.getPhoneNumber() != null) {
                 restaurant.setPhoneNumber(restaurantDto.getPhoneNumber());
             }
             if (restaurantDto.getPassword() != null) {
                 restaurant.setPassword(restaurantDto.getPassword());
+            }
+
+            if (restaurantDto.getFakeOrderAttempt() != null) {
+                restaurant.setFakeOrderAttempt(restaurantDto.getFakeOrderAttempt());
             }
 
             if (restaurantDto.getCreatedDate() != null) {

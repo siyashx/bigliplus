@@ -68,6 +68,7 @@ public class CourierServiceImpl implements CourierServiceInter {
             if (courierDto.getName() != null) {
                 courier.setName(courierDto.getName());
             }
+
             if (courierDto.getPhoneNumber() != null) {
                 courier.setPhoneNumber(courierDto.getPhoneNumber());
             }
@@ -103,6 +104,10 @@ public class CourierServiceImpl implements CourierServiceInter {
 
             if (courierDto.getRegisterRequest() != null) {
                 courier.setRegisterRequest(courierDto.getRegisterRequest());
+            }
+
+            if (courierDto.getActiveStartTime() != null) {
+                courier.setActiveStartTime(courierDto.getActiveStartTime());
             }
 
             if (courierDto.getDeviceId() != null) {
