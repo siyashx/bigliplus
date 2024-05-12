@@ -58,5 +58,5 @@ public class Order {
     private String createdTime;
 
     @JsonProperty("isDisable")
-    private String isDisable;
+    private Boolean isDisable;
 }

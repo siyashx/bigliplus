@@ -35,6 +35,8 @@ public class Restaurant {
 
     private Boolean fakeOrderAttempt;
 
+    private String lastActiveDate;
+
     private String createdDate;
 
     private String deviceId;

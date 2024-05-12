@@ -47,6 +47,8 @@ public class Courier {
 
     private String activeStartTime;
 
+    private String lastActiveDate;
+
     private String deviceId;
 
     @JsonProperty("isDisable")

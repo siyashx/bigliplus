@@ -40,6 +40,8 @@ public class CourierDto {
 
     private String deviceId;
 
+    private String lastActiveDate;
+
     private String activeStartTime;
 
     @JsonProperty("isDisable")

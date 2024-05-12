@@ -89,6 +89,10 @@ public class RestaurantServiceImpl implements RestaurantServiceInter {
                 restaurant.setFakeOrderAttempt(restaurantDto.getFakeOrderAttempt());
             }
 
+            if (restaurantDto.getLastActiveDate() != null) {
+                restaurant.setLastActiveDate(restaurantDto.getLastActiveDate());
+            }
+
             if (restaurantDto.getCreatedDate() != null) {
                 restaurant.setCreatedDate(restaurantDto.getCreatedDate());
             }
@@ -127,4 +131,5 @@ public class RestaurantServiceImpl implements RestaurantServiceInter {
         }
         return null;
     }
+
 }

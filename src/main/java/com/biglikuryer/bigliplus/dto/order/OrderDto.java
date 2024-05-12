@@ -49,5 +49,5 @@ public class OrderDto {
     private String createdTime;
 
     @JsonProperty("isDisable")
-    private String isDisable;
+    private Boolean isDisable;
 }
