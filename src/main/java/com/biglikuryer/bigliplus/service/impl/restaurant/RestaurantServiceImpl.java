@@ -78,6 +78,10 @@ public class RestaurantServiceImpl implements RestaurantServiceInter {
                 restaurant.setGender(restaurantDto.getGender());
             }
 
+            if (restaurantDto.getKg() != null) {
+                restaurant.setKg(restaurantDto.getKg());
+            }
+
             if (restaurantDto.getPhoneNumber() != null) {
                 restaurant.setPhoneNumber(restaurantDto.getPhoneNumber());
             }

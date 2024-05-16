@@ -22,6 +22,8 @@ public class RestaurantDto {
 
     private String tempName;
 
+    private Integer kg;
+
     private String phoneNumber;
 
     private String password;

@@ -22,7 +22,7 @@ public class AdminNotificationController {
     }
 
     @GetMapping("/{detId}")
-    public ResponseEntity<AdminNotificationDto> getAdminCurrentBalanceDetById(@PathVariable("detId") Long id) {
+    public ResponseEntity<AdminNotificationDto> getAdminNotificationById(@PathVariable("detId") Long id) {
         AdminNotificationDto det = service.getAdminNotificationById(id);
         if (det != null) {
             return ResponseEntity.ok(det);
