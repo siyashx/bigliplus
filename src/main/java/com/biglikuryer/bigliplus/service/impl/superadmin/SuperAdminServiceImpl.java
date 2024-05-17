@@ -4,10 +4,12 @@ import com.biglikuryer.bigliplus.dao.superadmin.SuperAdminRepository;
 import com.biglikuryer.bigliplus.dto.superadmin.SuperAdminDto;
 import com.biglikuryer.bigliplus.model.superadmin.SuperAdmin;
 import org.modelmapper.ModelMapper;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class SuperAdminServiceImpl {
 
     private final SuperAdminRepository superAdminRepository;
