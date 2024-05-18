@@ -14,4 +14,6 @@ public class SuperAdminDto {
     private Long id;
 
     private Boolean isActive;
+
+    private Integer latestVersion;
 }

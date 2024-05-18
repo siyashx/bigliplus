@@ -53,6 +53,10 @@ public class SuperAdminServiceImpl {
                 superAdmin.setIsActive(superAdminDto.getIsActive());
             }
 
+            if (superAdminDto.getLatestVersion() != null) {
+                superAdmin.setLatestVersion(superAdminDto.getLatestVersion());
+            }
+
             superAdmin = superAdminRepository.save(superAdmin);
             return modelMapper.map(superAdmin, SuperAdminDto.class);
         }

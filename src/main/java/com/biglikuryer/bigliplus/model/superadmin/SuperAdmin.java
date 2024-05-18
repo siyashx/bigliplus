@@ -19,4 +19,6 @@ public class SuperAdmin {
     private Long id;
 
     private Boolean isActive;
+
+    private Integer latestVersion;
 }
