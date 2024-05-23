@@ -16,4 +16,6 @@ public class SuperAdminDto {
     private Boolean isActive;
 
     private Integer latestVersion;
+
+    private Boolean isGoogleTest;
 }
