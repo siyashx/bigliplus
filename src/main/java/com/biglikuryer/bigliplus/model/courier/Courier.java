@@ -45,10 +45,6 @@ public class Courier {
 
     private String createdDate;
 
-    private Boolean registerRequest;
-
-    private String activeStartTime;
-
     private String lastActiveDate;
 
     private String deviceId;

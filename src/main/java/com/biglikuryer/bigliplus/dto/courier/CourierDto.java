@@ -38,13 +38,9 @@ public class CourierDto {
 
     private String createdDate;
 
-    private Boolean registerRequest;
-
     private String deviceId;
 
     private String lastActiveDate;
-
-    private String activeStartTime;
 
     @JsonProperty("isDisable")
     private Boolean isDisable;

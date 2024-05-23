@@ -107,15 +107,8 @@ public class CourierServiceImpl implements CourierServiceInter {
                 courier.setCreatedDate(courierDto.getCreatedDate());
             }
 
-            if (courierDto.getRegisterRequest() != null) {
-                courier.setRegisterRequest(courierDto.getRegisterRequest());
-            }
-
             if (courierDto.getLastActiveDate() != null) {
                 courier.setLastActiveDate(courierDto.getLastActiveDate());
-            }
-            if (courierDto.getActiveStartTime() != null) {
-                courier.setActiveStartTime(courierDto.getActiveStartTime());
             }
 
             if (courierDto.getDeviceId() != null) {
