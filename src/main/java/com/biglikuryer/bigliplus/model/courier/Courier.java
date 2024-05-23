@@ -35,6 +35,8 @@ public class Courier {
 
     private String latLong;
 
+    private String subscriptionTime;
+
     private Boolean currentlyDelivery;
 
     private String map;

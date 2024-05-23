@@ -87,6 +87,11 @@ public class CourierServiceImpl implements CourierServiceInter {
             if (courierDto.getLatLong() != null) {
                 courier.setLatLong(courierDto.getLatLong());
             }
+
+            if (courierDto.getSubscriptionTime() != null) {
+                courier.setSubscriptionTime(courierDto.getSubscriptionTime());
+            }
+
             if (courierDto.getCurrentlyDelivery() != null) {
                 courier.setCurrentlyDelivery(courierDto.getCurrentlyDelivery());
             }
