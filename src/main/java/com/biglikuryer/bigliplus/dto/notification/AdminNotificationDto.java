@@ -19,6 +19,10 @@ public class AdminNotificationDto {
 
     private Boolean isReport;
 
+    private Boolean isSupport;
+
+    private String createdDate;
+
     private String text;
 
 }

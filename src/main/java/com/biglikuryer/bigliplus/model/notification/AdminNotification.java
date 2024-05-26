@@ -24,5 +24,9 @@ public class AdminNotification {
 
     private Boolean isReport;
 
+    private Boolean isSupport;
+
+    private String createdDate;
+
     private String text;
 }
