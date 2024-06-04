@@ -88,6 +88,10 @@ public class CourierServiceImpl implements CourierServiceInter {
                 courier.setLatLong(courierDto.getLatLong());
             }
 
+            if (courierDto.getRadius() != null) {
+                courier.setRadius(courierDto.getRadius());
+            }
+
             if (courierDto.getCurrentlyDelivery() != null) {
                 courier.setCurrentlyDelivery(courierDto.getCurrentlyDelivery());
             }
