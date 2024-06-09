@@ -101,6 +101,10 @@ public class OrderServiceImpl implements OrderServiceInter {
                 order.setWalkTime(orderDto.getWalkTime());
             }
 
+            if (orderDto.getIsHelmetImportant() != null) {
+                order.setIsHelmetImportant(orderDto.getIsHelmetImportant());
+            }
+
             if (orderDto.getNeedCourierPrice() != null) {
                 order.setNeedCourierPrice(orderDto.getNeedCourierPrice());
             }

@@ -49,6 +49,8 @@ public class Order {
 
     private String walkTime;
 
+    private Boolean isHelmetImportant;
+
     private String needCourierPrice;
 
     private Double price;

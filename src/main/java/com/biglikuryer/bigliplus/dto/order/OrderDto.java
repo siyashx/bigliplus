@@ -40,6 +40,8 @@ public class OrderDto {
 
     private String walkTime;
 
+    private Boolean isHelmetImportant;
+
     private String needCourierPrice;
 
     private Double price;
