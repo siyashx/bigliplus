@@ -27,6 +27,8 @@ public class Restaurant {
 
     private String tempName;
 
+    private String tempPhoneNumber;
+
     private Integer kg;
 
     @Column(unique = true, nullable = false)
