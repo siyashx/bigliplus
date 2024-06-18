@@ -39,6 +39,8 @@ public class Order {
 
     private String orderType;
 
+    private String orderMode;
+
     private String cancelledCouriers;
 
     private String cancelledDescription;

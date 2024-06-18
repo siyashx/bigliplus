@@ -22,6 +22,8 @@ public class OrderDto {
 
     private String orderType;
 
+    private String orderMode;
+
     private String cancelledCouriers;
 
     private String cancelledDescription;

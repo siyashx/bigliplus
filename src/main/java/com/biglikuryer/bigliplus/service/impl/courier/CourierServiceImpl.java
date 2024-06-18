@@ -92,6 +92,18 @@ public class CourierServiceImpl implements CourierServiceInter {
                 courier.setRadius(courierDto.getRadius());
             }
 
+            if (courierDto.getWorkType() != null) {
+                courier.setWorkType(courierDto.getWorkType());
+            }
+
+            if (courierDto.getIsActiveWorkTypeRequest() != null) {
+                courier.setIsActiveWorkTypeRequest(courierDto.getIsActiveWorkTypeRequest());
+            }
+
+            if (courierDto.getIsAllowedEconomOrders() != null) {
+                courier.setIsAllowedEconomOrders(courierDto.getIsAllowedEconomOrders());
+            }
+
             if (courierDto.getCurrentlyDelivery() != null) {
                 courier.setCurrentlyDelivery(courierDto.getCurrentlyDelivery());
             }

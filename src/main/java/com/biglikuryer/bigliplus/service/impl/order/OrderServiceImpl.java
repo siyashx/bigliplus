@@ -81,6 +81,10 @@ public class OrderServiceImpl implements OrderServiceInter {
                 order.setOrderType(orderDto.getOrderType());
             }
 
+            if (orderDto.getOrderMode() != null) {
+                order.setOrderMode(orderDto.getOrderMode());
+            }
+
             if (orderDto.getCancelledCouriers() != null) {
                 order.setCancelledCouriers(orderDto.getCancelledCouriers());
             }

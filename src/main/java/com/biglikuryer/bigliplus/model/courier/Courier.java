@@ -30,6 +30,12 @@ public class Courier {
 
     private String motoDescription;
 
+    private String workType;
+
+    private Boolean isActiveWorkTypeRequest;
+
+    private Boolean isAllowedEconomOrders;
+
     @Column(nullable = false)
     private String password;
 

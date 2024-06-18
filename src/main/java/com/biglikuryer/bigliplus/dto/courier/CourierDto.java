@@ -24,6 +24,13 @@ public class CourierDto {
 
     private String motoDescription;
 
+
+    private String workType;
+
+    private Boolean isActiveWorkTypeRequest;
+
+    private Boolean isAllowedEconomOrders;
+
     private String password;
 
     private String latLong;
