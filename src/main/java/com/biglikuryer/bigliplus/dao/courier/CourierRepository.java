@@ -8,6 +8,4 @@ import java.util.List;
 public interface CourierRepository extends JpaRepository<Courier, Long> {
 
     Courier findCourierByPhoneNumber(String phoneNumber);
-    List<Courier> findByCurrentlyDeliveryFalseAndLastActiveDateNotNullAndLastActiveDateBefore(String threshold);
-
 }
