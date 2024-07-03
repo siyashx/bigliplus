@@ -27,7 +27,7 @@ public class ActionDto {
 
     private String pickupLocation;
 
-    private String maxSubSize;
+    private Integer maxSubSize;
 
     private String toLocationTitle;
 
