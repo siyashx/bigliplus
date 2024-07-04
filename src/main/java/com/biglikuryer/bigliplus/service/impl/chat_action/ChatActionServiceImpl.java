@@ -26,6 +26,7 @@ public class ChatActionServiceImpl implements ChatActionServiceInter {
     public ChatActionDto createChatAction(ChatActionDto chatActionDto) {
         ChatAction chatAction = modelMapper.map(chatActionDto, ChatAction.class);
         chatAction = chatActionRepository.save(chatAction);
+        System.out.println("Generated ID: " + chatAction.getId());
         return modelMapper.map(chatAction, ChatActionDto.class);
     }
 
