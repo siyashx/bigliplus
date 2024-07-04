@@ -42,6 +42,4 @@ public class ActionDto {
     private String createdDate;
 
 
-
-
 }

@@ -7,6 +7,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/api/v3/action")
 public class ActionCustomController {
@@ -14,6 +16,20 @@ public class ActionCustomController {
 
     public ActionCustomController(ActionServiceImpl actionServiceImpl) {
         this.actionServiceImpl = actionServiceImpl;
+    }
+
+    // List
+    @GetMapping
+    public ResponseEntity<List<ActionDto>> getAllActions() {
+        List<ActionDto> actionDtoList = actionServiceImpl.getAllActions();
+        return ResponseEntity.ok(actionDtoList);
+    }
+
+    // Create
+    @PostMapping
+    public ResponseEntity<ActionDto> createAction(@RequestBody ActionDto actionDto) {
+        ActionDto createdAction = actionServiceImpl.createAction(actionDto);
+        return ResponseEntity.ok(createdAction);
     }
 
     // Id

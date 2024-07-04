@@ -7,21 +7,37 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/api/v3/chat")
 public class ChatActionCustomController {
-    private final ChatActionServiceImpl actionServiceImpl;
+    private final ChatActionServiceImpl chatActionServiceImpl;
 
     public ChatActionCustomController(ChatActionServiceImpl actionServiceImpl) {
-        this.actionServiceImpl = actionServiceImpl;
+        this.chatActionServiceImpl = actionServiceImpl;
+    }
+
+    // List
+    @GetMapping
+    public ResponseEntity<List<ChatActionDto>> getAllActions() {
+        List<ChatActionDto> ChatActionDtoList = chatActionServiceImpl.getAllChatActions();
+        return ResponseEntity.ok(ChatActionDtoList);
+    }
+
+    // Create
+    @PostMapping
+    public ResponseEntity<ChatActionDto> createAction(@RequestBody ChatActionDto ChatActionDto) {
+        ChatActionDto createdAction = chatActionServiceImpl.createChatAction(ChatActionDto);
+        return ResponseEntity.ok(createdAction);
     }
 
     // Id
     @GetMapping("/{actionId}")
     public ResponseEntity<ChatActionDto> findChatActionById(@PathVariable Long actionId) {
-        ChatActionDto actionDto = actionServiceImpl.getChatActionById(actionId);
-        if (actionDto != null) {
-            return ResponseEntity.ok(actionDto);
+        ChatActionDto ChatActionDto = chatActionServiceImpl.getChatActionById(actionId);
+        if (ChatActionDto != null) {
+            return ResponseEntity.ok(ChatActionDto);
         }
         return ResponseEntity.notFound().build();
     }
@@ -30,10 +46,10 @@ public class ChatActionCustomController {
     @PutMapping("/{actionId}")
     public ResponseEntity<?> updateChatAction(
             @PathVariable Long actionId,
-            @RequestBody ChatActionDto actionDto) {
+            @RequestBody ChatActionDto ChatActionDto) {
 
         try {
-            ChatActionDto updatedChatAction = actionServiceImpl.updateChatAction(actionId, actionDto);
+            ChatActionDto updatedChatAction = chatActionServiceImpl.updateChatAction(actionId, ChatActionDto);
             if (updatedChatAction != null) {
                 return ResponseEntity.ok(updatedChatAction);
             }
@@ -49,7 +65,7 @@ public class ChatActionCustomController {
     // Delete
     @DeleteMapping("/{actionId}")
     public ResponseEntity<String> deleteChatAction(@PathVariable Long actionId) {
-        boolean deleted = actionServiceImpl.removeById(actionId);
+        boolean deleted = chatActionServiceImpl.removeById(actionId);
         if (deleted) {
             return ResponseEntity.ok("ChatAction deleted successfully");
         }

@@ -18,9 +18,6 @@ public class Action {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Version
-    private Long version; // Optimistic locking
-
     private Long mainUserId;
 
     private Boolean createdByCustomer;
