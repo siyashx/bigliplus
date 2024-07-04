@@ -7,13 +7,13 @@ import java.util.List;
 
 public interface ChatActionServiceInter {
 
-    ChatActionDto createChatAction(ChatActionDto actionDto);
+    ChatActionDto createChatAction(ChatActionDto chatActionId);
 
     List<ChatActionDto> getAllChatActions();
 
-    Boolean removeById(Long actionId);
+    Boolean removeById(Long chatActionId);
 
-    ChatActionDto getChatActionById(Long actionId);
+    ChatActionDto getChatActionById(Long chatActionId);
 
-    ChatActionDto updateChatAction(Long actionId, ChatActionDto actionDto);
+    ChatActionDto updateChatAction(Long chatActionId, ChatActionDto chatActionDto);
 }
