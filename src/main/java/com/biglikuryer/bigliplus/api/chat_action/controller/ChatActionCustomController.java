@@ -14,30 +14,30 @@ import java.util.List;
 public class ChatActionCustomController {
     private final ChatActionServiceImpl chatActionServiceImpl;
 
-    public ChatActionCustomController(ChatActionServiceImpl actionServiceImpl) {
-        this.chatActionServiceImpl = actionServiceImpl;
+    public ChatActionCustomController(ChatActionServiceImpl chatActionServiceImpl) {
+        this.chatActionServiceImpl = chatActionServiceImpl;
     }
 
     // List
     @GetMapping
     public ResponseEntity<List<ChatActionDto>> getAllActions() {
-        List<ChatActionDto> ChatActionDtoList = chatActionServiceImpl.getAllChatActions();
-        return ResponseEntity.ok(ChatActionDtoList);
+        List<ChatActionDto> chatActionDtoList = chatActionServiceImpl.getAllChatActions();
+        return ResponseEntity.ok(chatActionDtoList);
     }
 
     // Create
     @PostMapping
-    public ResponseEntity<ChatActionDto> createAction(@RequestBody ChatActionDto ChatActionDto) {
-        ChatActionDto createdAction = chatActionServiceImpl.createChatAction(ChatActionDto);
+    public ResponseEntity<ChatActionDto> createAction(@RequestBody ChatActionDto chatActionDto) {
+        ChatActionDto createdAction = chatActionServiceImpl.createChatAction(chatActionDto);
         return ResponseEntity.ok(createdAction);
     }
 
     // Id
     @GetMapping("/{actionId}")
     public ResponseEntity<ChatActionDto> findChatActionById(@PathVariable Long actionId) {
-        ChatActionDto ChatActionDto = chatActionServiceImpl.getChatActionById(actionId);
-        if (ChatActionDto != null) {
-            return ResponseEntity.ok(ChatActionDto);
+        ChatActionDto chatActionDto = chatActionServiceImpl.getChatActionById(actionId);
+        if (chatActionDto != null) {
+            return ResponseEntity.ok(chatActionDto);
         }
         return ResponseEntity.notFound().build();
     }
@@ -46,10 +46,10 @@ public class ChatActionCustomController {
     @PutMapping("/{actionId}")
     public ResponseEntity<?> updateChatAction(
             @PathVariable Long actionId,
-            @RequestBody ChatActionDto ChatActionDto) {
+            @RequestBody ChatActionDto chatActionDto) {
 
         try {
-            ChatActionDto updatedChatAction = chatActionServiceImpl.updateChatAction(actionId, ChatActionDto);
+            ChatActionDto updatedChatAction = chatActionServiceImpl.updateChatAction(actionId, chatActionDto);
             if (updatedChatAction != null) {
                 return ResponseEntity.ok(updatedChatAction);
             }

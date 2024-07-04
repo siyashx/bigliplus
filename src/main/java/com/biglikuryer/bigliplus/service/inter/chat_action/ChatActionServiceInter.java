@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface ChatActionServiceInter {
 
-    ChatActionDto createChatAction(ChatActionDto chatActionId);
+    ChatActionDto createChatAction(ChatActionDto chatActionDto);
 
     List<ChatActionDto> getAllChatActions();
 
