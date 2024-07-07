@@ -20,6 +20,8 @@ public class Action {
 
     private Long mainUserId;
 
+    private String inviteDate;
+
     private Boolean createdByCustomer;
 
     private Boolean isDisAllowedCustomerJoin;

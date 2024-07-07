@@ -15,6 +15,8 @@ public class ActionDto {
 
     private Long mainUserId;
 
+    private String inviteDate;
+
     private Boolean createdByCustomer;
 
     private Boolean isDisAllowedCustomerJoin;

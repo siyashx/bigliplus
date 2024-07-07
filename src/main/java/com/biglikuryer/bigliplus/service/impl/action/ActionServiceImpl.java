@@ -53,6 +53,10 @@ public class ActionServiceImpl implements ActionServiceInter {
                 action.setMainUserId(actionDto.getMainUserId());
             }
 
+            if (actionDto.getInviteDate() != null) {
+                action.setInviteDate(actionDto.getInviteDate());
+            }
+
             if (actionDto.getCreatedByCustomer() != null) {
                 action.setCreatedByCustomer(actionDto.getCreatedByCustomer());
             }
