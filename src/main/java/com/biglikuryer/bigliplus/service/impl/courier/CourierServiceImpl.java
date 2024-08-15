@@ -81,6 +81,19 @@ public class CourierServiceImpl implements CourierServiceInter {
                 courier.setMotoDescription(courierDto.getMotoDescription());
             }
 
+
+            if (courierDto.getRating() != null) {
+                courier.setRating(courierDto.getRating());
+            }
+
+            if (courierDto.getRatedCustomers() != null) {
+                courier.setRatedCustomers(courierDto.getRatedCustomers());
+            }
+
+            if (courierDto.getRatedPoints() != null) {
+                courier.setRatedPoints(courierDto.getRatedPoints());
+            }
+
             if (courierDto.getPassword() != null) {
                 courier.setPassword(courierDto.getPassword());
             }

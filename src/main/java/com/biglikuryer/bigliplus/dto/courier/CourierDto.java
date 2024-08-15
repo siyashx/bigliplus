@@ -24,6 +24,11 @@ public class CourierDto {
 
     private String motoDescription;
 
+    private String rating;
+
+    private String ratedCustomers;
+
+    private String ratedPoints;
 
     private String workType;
 

@@ -30,6 +30,12 @@ public class Courier {
 
     private String motoDescription;
 
+    private String rating;
+
+    private String ratedCustomers;
+
+    private String ratedPoints;
+
     private String workType;
 
     private Boolean isActiveWorkTypeRequest;
