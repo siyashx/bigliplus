@@ -22,7 +22,7 @@ public class Advert {
 
     private String mode;
 
-    private String premiumDate;
+    private String premiumExpiredDate;
 
     private Boolean haveWhatsapp;
 

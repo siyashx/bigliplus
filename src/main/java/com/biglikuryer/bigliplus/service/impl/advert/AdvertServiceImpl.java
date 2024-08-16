@@ -57,8 +57,8 @@ public class AdvertServiceImpl implements AdvertServiceInter {
                 advert.setMode(advertDto.getMode());
             }
 
-            if (advertDto.getPremiumDate() != null) {
-                advert.setPremiumDate(advertDto.getPremiumDate());
+            if (advertDto.getPremiumExpiredDate() != null) {
+                advert.setPremiumExpiredDate(advertDto.getPremiumExpiredDate());
             }
 
             if (advertDto.getHaveWhatsapp() != null) {

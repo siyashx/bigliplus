@@ -22,6 +22,10 @@ public class ChatGlobal {
 
     private Boolean isSeen;
 
+    private Boolean isForwarded;
+
+    private String forwardedId;
+
     private Boolean isCustomer;
 
     private String message;
