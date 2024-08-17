@@ -21,6 +21,4 @@ public class SuperAdmin {
     private Boolean isActive;
 
     private Integer latestVersion;
-
-    private Boolean isGoogleTest;
 }

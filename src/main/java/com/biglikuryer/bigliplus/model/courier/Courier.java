@@ -30,6 +30,8 @@ public class Courier {
 
     private String motoDescription;
 
+    private Boolean isMutedGlobalMessages;
+
     private String rating;
 
     private String ratedCustomers;

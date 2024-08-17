@@ -20,7 +20,7 @@ public class ChatGlobal {
 
     private Long userId;
 
-    private Boolean isSeen;
+    private String isSeenId;
 
     private Boolean isForwarded;
 

@@ -57,10 +57,6 @@ public class SuperAdminServiceImpl {
                 superAdmin.setLatestVersion(superAdminDto.getLatestVersion());
             }
 
-            if (superAdminDto.getIsGoogleTest() != null) {
-                superAdmin.setIsGoogleTest(superAdminDto.getIsGoogleTest());
-            }
-
 
             superAdmin = superAdminRepository.save(superAdmin);
             return modelMapper.map(superAdmin, SuperAdminDto.class);

@@ -46,6 +46,10 @@ public class AdminServiceImpl implements AdminServiceInter {
                 admin.setNotificationDisable(adminDto.getNotificationDisable());
             }
 
+            if (adminDto.getIsMutedGlobalMessages() != null) {
+                admin.setIsMutedGlobalMessages(adminDto.getIsMutedGlobalMessages());
+            }
+
             if (adminDto.getDeviceId() != null) {
                 admin.setDeviceId(adminDto.getDeviceId());
             }

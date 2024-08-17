@@ -24,6 +24,8 @@ public class CourierDto {
 
     private String motoDescription;
 
+    private Boolean isMutedGlobalMessages;
+
     private String rating;
 
     private String ratedCustomers;

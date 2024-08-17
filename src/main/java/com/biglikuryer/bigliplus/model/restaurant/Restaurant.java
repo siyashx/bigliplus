@@ -29,6 +29,8 @@ public class Restaurant {
 
     private String tempPhoneNumber;
 
+    private Boolean isMutedGlobalMessages;
+
     private Integer kg;
 
     @Column(unique = true, nullable = false)

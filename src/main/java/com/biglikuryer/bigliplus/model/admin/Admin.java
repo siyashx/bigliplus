@@ -20,6 +20,8 @@ public class Admin {
 
     private String oneSignal;
 
+    private Boolean isMutedGlobalMessages;
+
     private Boolean notificationDisable;
 
     private String deviceId;

@@ -24,6 +24,8 @@ public class RestaurantDto {
 
     private String tempPhoneNumber;
 
+    private Boolean isMutedGlobalMessages;
+
     private Integer kg;
 
     private String phoneNumber;

@@ -17,5 +17,7 @@ public class AdminDto {
 
     private Boolean notificationDisable;
 
+    private Boolean isMutedGlobalMessages;
+
     private String deviceId;
 }

@@ -53,8 +53,8 @@ public class ChatGlobalServiceImpl implements ChatGlobalServiceInter {
                 chatGlobal.setUserId(chatGlobalDto.getUserId());
             }
 
-            if (chatGlobalDto.getIsSeen() != null) {
-                chatGlobal.setIsSeen(chatGlobalDto.getIsSeen());
+            if (chatGlobalDto.getIsSeenId() != null) {
+                chatGlobal.setIsSeenId(chatGlobalDto.getIsSeenId());
             }
 
             if (chatGlobalDto.getIsForwarded() != null) {

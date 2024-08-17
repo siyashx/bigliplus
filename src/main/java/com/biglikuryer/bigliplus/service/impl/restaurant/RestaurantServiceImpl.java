@@ -82,6 +82,10 @@ public class RestaurantServiceImpl implements RestaurantServiceInter {
                 restaurant.setGender(restaurantDto.getGender());
             }
 
+            if (restaurantDto.getIsMutedGlobalMessages() != null) {
+                restaurant.setIsMutedGlobalMessages(restaurantDto.getIsMutedGlobalMessages());
+            }
+
             if (restaurantDto.getKg() != null) {
                 restaurant.setKg(restaurantDto.getKg());
             }

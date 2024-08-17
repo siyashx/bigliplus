@@ -80,6 +80,9 @@ public class CourierServiceImpl implements CourierServiceInter {
             if (courierDto.getMotoDescription() != null) {
                 courier.setMotoDescription(courierDto.getMotoDescription());
             }
+            if (courierDto.getIsMutedGlobalMessages() != null) {
+                courier.setIsMutedGlobalMessages(courierDto.getIsMutedGlobalMessages());
+            }
 
 
             if (courierDto.getRating() != null) {

@@ -15,7 +15,7 @@ public class ChatGlobalDto {
 
     private Long userId;
 
-    private Boolean isSeen;
+    private String isSeenId;
     
     private Boolean isForwarded;
 
