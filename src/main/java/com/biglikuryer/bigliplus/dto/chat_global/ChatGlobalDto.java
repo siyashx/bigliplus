@@ -23,6 +23,8 @@ public class ChatGlobalDto {
 
     private Boolean isCustomer;
 
+    private Boolean isAdmin;
+
     private String message;
 
     private String time;

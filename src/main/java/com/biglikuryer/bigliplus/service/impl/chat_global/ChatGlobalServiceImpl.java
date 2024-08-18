@@ -69,6 +69,10 @@ public class ChatGlobalServiceImpl implements ChatGlobalServiceInter {
                 chatGlobal.setIsCustomer(chatGlobalDto.getIsCustomer());
             }
 
+            if (chatGlobalDto.getIsAdmin() != null) {
+                chatGlobal.setIsAdmin(chatGlobalDto.getIsAdmin());
+            }
+
             if (chatGlobalDto.getMessage() != null) {
                 chatGlobal.setMessage(chatGlobalDto.getMessage());
             }
