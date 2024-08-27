@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @Controller
-@RequestMapping("/api/v3")
+@RequestMapping("/api")
 public class ChatController {
 
     @Autowired
