@@ -16,6 +16,7 @@ public class ChatDto {
 
     private Long id;
     private Long userId;
+    private String username;
     private HashMap<String, Long> isSeenIds;
     private Boolean isForwarded;
     private ForwardedMessage forwardedMessage;

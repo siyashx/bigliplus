@@ -6,5 +6,6 @@ import lombok.Data;
 public class ForwardedMessage {
     private Long userId;
     private String userType;
+    private String username;
     private String message;
 }

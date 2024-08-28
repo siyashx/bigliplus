@@ -23,6 +23,8 @@ public class Chat {
 
     private Long userId;
 
+    private String username;
+
     @Convert(converter = ForwardedMessageConverter.class)
     @Column(name = "forwarded_message", columnDefinition = "TEXT")
     private ForwardedMessage forwardedMessage;
