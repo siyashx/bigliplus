@@ -28,8 +28,6 @@ public class ChatController {
 
     @MessageMapping("/sendMessage")
     public void sendMessage(@Payload ChatDto chatMessageDto) {
-        // ChatDto'yu Chat entity'sine dönüştür
-        Chat chatMessage = convertToEntity(chatMessageDto);
         // Chat mesajını veritabanına kaydet
         chatServiceImpl.createChat(chatMessageDto); // Bu metod ChatDto alıyor ve veritabanına kaydediyor
         // Chat mesajını tüm abone olan istemcilere gönder
@@ -43,6 +41,7 @@ public class ChatController {
         // Tüm mesajları tüm abone olan istemcilere gönder
         messagingTemplate.convertAndSend("/topic/public", messages);
     }
+
 
     // CRUD Operations for Chat
 
@@ -90,11 +89,10 @@ public class ChatController {
         return Chat.builder()
                 .id(chatDto.getId())
                 .userId(chatDto.getUserId())
-                .isSeenId(chatDto.getIsSeenId())
+                .isSeenIds(chatDto.getIsSeenIds())
                 .isForwarded(chatDto.getIsForwarded())
-                .forwardedId(chatDto.getForwardedId())
-                .isCustomer(chatDto.getIsCustomer())
-                .isAdmin(chatDto.getIsAdmin())
+                .forwardedMessage(chatDto.getForwardedMessage())
+                .userType(chatDto.getUserType())
                 .message(chatDto.getMessage())
                 .time(chatDto.getTime())
                 .date(chatDto.getDate())

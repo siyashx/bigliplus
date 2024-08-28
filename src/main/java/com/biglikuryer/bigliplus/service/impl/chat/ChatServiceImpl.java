@@ -54,24 +54,20 @@ public class ChatServiceImpl implements ChatServiceInter {
                 chat.setUserId(chatDto.getUserId());
             }
 
-            if (chatDto.getIsSeenId() != null) {
-                chat.setIsSeenId(chatDto.getIsSeenId());
+            if (chatDto.getIsSeenIds() != null) {
+                chat.setIsSeenIds(chatDto.getIsSeenIds());
             }
 
             if (chatDto.getIsForwarded() != null) {
                 chat.setIsForwarded(chatDto.getIsForwarded());
             }
 
-            if (chatDto.getForwardedId() != null) {
-                chat.setForwardedId(chatDto.getForwardedId());
+            if (chatDto.getForwardedMessage() != null) {
+                chat.setForwardedMessage(chatDto.getForwardedMessage());
             }
 
-            if (chatDto.getIsCustomer() != null) {
-                chat.setIsCustomer(chatDto.getIsCustomer());
-            }
-
-            if (chatDto.getIsAdmin() != null) {
-                chat.setIsAdmin(chatDto.getIsAdmin());
+            if (chatDto.getUserType() != null) {
+                chat.setUserType(chatDto.getUserType());
             }
 
             if (chatDto.getMessage() != null) {
