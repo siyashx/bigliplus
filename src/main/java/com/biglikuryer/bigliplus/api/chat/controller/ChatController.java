@@ -84,18 +84,4 @@ public class ChatController {
         }
         return ResponseEntity.notFound().build();
     }
-
-    private Chat convertToEntity(ChatDto chatDto) {
-        return Chat.builder()
-                .id(chatDto.getId())
-                .userId(chatDto.getUserId())
-                .isSeenIds(chatDto.getIsSeenIds())
-                .isForwarded(chatDto.getIsForwarded())
-                .forwardedMessage(chatDto.getForwardedMessage())
-                .userType(chatDto.getUserType())
-                .message(chatDto.getMessage())
-                .time(chatDto.getTime())
-                .date(chatDto.getDate())
-                .build();
-    }
 }

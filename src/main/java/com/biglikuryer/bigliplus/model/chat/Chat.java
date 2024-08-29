@@ -1,12 +1,13 @@
 package com.biglikuryer.bigliplus.model.chat;
 
 import com.biglikuryer.bigliplus.dto.chat.ForwardedMessage;
-import com.biglikuryer.bigliplus.dto.chat.ForwardedMessageConverter;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.util.List;
 import java.util.Map;
 
 @Entity
@@ -25,15 +26,9 @@ public class Chat {
 
     private String username;
 
-    @Convert(converter = ForwardedMessageConverter.class)
-    @Column(name = "forwarded_message", columnDefinition = "TEXT")
     private ForwardedMessage forwardedMessage;
 
-    @ElementCollection
-    @CollectionTable(name = "is_seen_ids", joinColumns = @JoinColumn(name = "chat_id"))
-    @MapKeyColumn(name = "key")
-    @Column(name = "value")
-    private Map<String, Long> isSeenIds;
+    private List<String> isSeenIds;
 
     private Boolean isForwarded;
     private String userType;

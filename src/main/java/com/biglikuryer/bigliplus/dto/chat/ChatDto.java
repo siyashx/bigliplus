@@ -1,5 +1,6 @@
 package com.biglikuryer.bigliplus.dto.chat;
 
+import kotlin.Pair;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -17,7 +18,7 @@ public class ChatDto {
     private Long id;
     private Long userId;
     private String username;
-    private HashMap<String, Long> isSeenIds;
+    private List<String> isSeenIds;
     private Boolean isForwarded;
     private ForwardedMessage forwardedMessage;
     private String userType;
