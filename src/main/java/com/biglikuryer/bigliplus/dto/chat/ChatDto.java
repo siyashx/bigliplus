@@ -1,5 +1,6 @@
 package com.biglikuryer.bigliplus.dto.chat;
 
+import jakarta.persistence.Convert;
 import kotlin.Pair;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -20,6 +21,7 @@ public class ChatDto {
     private String username;
     private List<String> isSeenIds;
     private Boolean isForwarded;
+    @Convert(converter = ForwardedMessageConverter.class)
     private ForwardedMessage forwardedMessage;
     private String userType;
     private String message;
