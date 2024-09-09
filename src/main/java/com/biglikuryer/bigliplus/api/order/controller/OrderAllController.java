@@ -8,11 +8,11 @@ import org.springframework.messaging.handler.annotation.SendTo;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
 @Controller
+@RequestMapping("/api/v3")
 public class OrderAllController {
     private final OrderServiceImpl orderServiceImpl;
 
@@ -21,9 +21,17 @@ public class OrderAllController {
         this.orderServiceImpl = orderServiceImpl;
     }
 
+    // WebSocket ile istekleri işlemek için metot
     @MessageMapping("/getOrders")
     @SendTo("/topic/orders")
-    public List<OrderDto> getAllOrders() {
+    public List<OrderDto> getAllOrdersViaWebSocket() {
         return orderServiceImpl.getAllOrders();
+    }
+
+    // HTTP GET isteği ile istekleri işlemek için metot
+    @GetMapping("/orders")
+    public ResponseEntity<List<OrderDto>> getAllOrdersViaHttp() {
+        List<OrderDto> orderDtoList = orderServiceImpl.getAllOrders();
+        return ResponseEntity.ok(orderDtoList);
     }
 }
