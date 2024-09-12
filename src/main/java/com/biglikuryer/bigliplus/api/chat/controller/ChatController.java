@@ -1,5 +1,6 @@
 package com.biglikuryer.bigliplus.api.chat.controller;
 
+/*
 import com.biglikuryer.bigliplus.dto.chat.ChatDto;
 import com.biglikuryer.bigliplus.model.chat.Chat;
 import com.biglikuryer.bigliplus.service.impl.chat.ChatServiceImpl;
@@ -85,3 +86,4 @@ public class ChatController {
         return ResponseEntity.notFound().build();
     }
 }
+*/
