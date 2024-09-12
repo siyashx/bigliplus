@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @Controller
-@RequestMapping("/api")
+@RequestMapping("/api/v3")
 public class ChatController {
 
     @Autowired
@@ -26,7 +26,7 @@ public class ChatController {
 
     // WebSocket Messaging
 
-    @MessageMapping("/sendMessage")
+    @MessageMapping("/sendMsg")
     public void sendMessage(@Payload ChatDto chatMessageDto) {
         // Chat mesajını veritabanına kaydet
         chatServiceImpl.createChat(chatMessageDto); // Bu metod ChatDto alıyor ve veritabanına kaydediyor
@@ -34,7 +34,7 @@ public class ChatController {
         messagingTemplate.convertAndSend("/topic/public", chatMessageDto);
     }
 
-    @MessageMapping("/getMessages")
+    @MessageMapping("/getMsg")
     public void getMessages() {
         // Tüm chat mesajlarını veritabanından al
         List<ChatDto> messages = chatServiceImpl.getAllChats();
