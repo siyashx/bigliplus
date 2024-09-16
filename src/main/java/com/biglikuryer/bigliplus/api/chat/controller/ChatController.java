@@ -1,14 +1,13 @@
 package com.biglikuryer.bigliplus.api.chat.controller;
 
 import com.biglikuryer.bigliplus.dto.chat.ChatDto;
-import com.biglikuryer.bigliplus.event.chat.ChatMessageReceivedEvent;
 import com.biglikuryer.bigliplus.service.impl.chat.ChatServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.event.EventListener;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.handler.annotation.Payload;
+import org.springframework.messaging.handler.annotation.SendTo;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -30,18 +29,12 @@ public class ChatController {
         this.messagingTemplate = messagingTemplate;
     }
 
-    @MessageMapping("/sendMsg")
-    public void sendMessage(@Payload ChatDto chatMessageDto) {
-        // Chat mesajını veritabanına kaydet
-        chatServiceImpl.createChat(chatMessageDto); // Bu metod ChatDto alıyor ve veritabanına kaydediyor
-        // Chat mesajını tüm abone olan istemcilere gönder
-        messagingTemplate.convertAndSend("/topic/public", chatMessageDto);
-    }
-
-    @EventListener
-    public void onChatMessageReceived(ChatMessageReceivedEvent event) {
-        List<ChatDto> messages = chatServiceImpl.getAllChats();
-        messagingTemplate.convertAndSend("/topic/public", messages);
+    // Mesaj gönderimi WebSocket ile yapılacak
+    @MessageMapping("/sendMessage")
+    @SendTo("/topic/public")
+    public ChatDto sendMessage(@Payload ChatDto chatMessageDto) {
+        // Mesajı kaydet ve ardından döndür
+        return chatServiceImpl.createChat(chatMessageDto);
     }
 
 
