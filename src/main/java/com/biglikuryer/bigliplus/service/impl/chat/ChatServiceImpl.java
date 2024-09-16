@@ -2,6 +2,7 @@ package com.biglikuryer.bigliplus.service.impl.chat;
 
 import com.biglikuryer.bigliplus.dao.chat.ChatRepository;
 import com.biglikuryer.bigliplus.dto.chat.ChatDto;
+import com.biglikuryer.bigliplus.event.chat.ChatMessageReceivedEvent;
 import com.biglikuryer.bigliplus.model.chat.Chat;
 import com.biglikuryer.bigliplus.service.inter.chat.ChatServiceInter;
 import org.modelmapper.ModelMapper;
@@ -11,22 +12,33 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
+import org.springframework.context.ApplicationEventPublisher;
+import org.springframework.beans.factory.annotation.Autowired;
+
 @Service
 public class ChatServiceImpl implements ChatServiceInter {
 
     private final ChatRepository chatRepository;
     private final ModelMapper modelMapper;
+    private final ApplicationEventPublisher eventPublisher;
 
-    public ChatServiceImpl(ChatRepository chatRepository, ModelMapper modelMapper) {
+    @Autowired
+    public ChatServiceImpl(ChatRepository chatRepository, ModelMapper modelMapper, ApplicationEventPublisher eventPublisher) {
         this.chatRepository = chatRepository;
         this.modelMapper = modelMapper;
+        this.eventPublisher = eventPublisher;
     }
 
     @Override
     public ChatDto createChat(ChatDto chatDto) {
         Chat chat = modelMapper.map(chatDto, Chat.class);
         chat = chatRepository.save(chat);
-        return modelMapper.map(chat, ChatDto.class);
+        ChatDto createdChatDto = modelMapper.map(chat, ChatDto.class);
+
+        // Olayı tetikle
+        eventPublisher.publishEvent(new ChatMessageReceivedEvent(this, getAllChats()));
+
+        return createdChatDto;
     }
 
     @Override
@@ -87,7 +99,12 @@ public class ChatServiceImpl implements ChatServiceInter {
             }
 
             chat = chatRepository.save(chat);
-            return modelMapper.map(chat, ChatDto.class);
+            ChatDto updatedChatDto = modelMapper.map(chat, ChatDto.class);
+
+            // Olayı tetikle
+            eventPublisher.publishEvent(new ChatMessageReceivedEvent(this, getAllChats()));
+
+            return updatedChatDto;
         }
         return null;
     }
@@ -97,8 +114,13 @@ public class ChatServiceImpl implements ChatServiceInter {
         Optional<Chat> chatOptional = chatRepository.findById(chatId);
         if (chatOptional.isPresent()) {
             chatRepository.delete(chatOptional.get());
+
+            // Olayı tetikle
+            eventPublisher.publishEvent(new ChatMessageReceivedEvent(this, getAllChats()));
+
             return true;
         }
         return false;
     }
+
 }

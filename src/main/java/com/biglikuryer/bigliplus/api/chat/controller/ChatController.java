@@ -1,9 +1,10 @@
 package com.biglikuryer.bigliplus.api.chat.controller;
 
 import com.biglikuryer.bigliplus.dto.chat.ChatDto;
-import com.biglikuryer.bigliplus.model.chat.Chat;
+import com.biglikuryer.bigliplus.event.chat.ChatMessageReceivedEvent;
 import com.biglikuryer.bigliplus.service.impl.chat.ChatServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.event.EventListener;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.messaging.handler.annotation.MessageMapping;
@@ -37,11 +38,9 @@ public class ChatController {
         messagingTemplate.convertAndSend("/topic/public", chatMessageDto);
     }
 
-    @MessageMapping("/getMsg")
-    public void getMessages() {
-        // Tüm chat mesajlarını veritabanından al
+    @EventListener
+    public void onChatMessageReceived(ChatMessageReceivedEvent event) {
         List<ChatDto> messages = chatServiceImpl.getAllChats();
-        // Tüm mesajları tüm abone olan istemcilere gönder
         messagingTemplate.convertAndSend("/topic/public", messages);
     }
 
