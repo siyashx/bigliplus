@@ -47,6 +47,15 @@ public class ChatController {
 
     // CRUD Operations for Chat
 
+    @GetMapping("/chats")
+    public ResponseEntity<List<ChatDto>> getAllChat() {
+        List<ChatDto> messages = chatServiceImpl.getAllChats();
+        if (messages != null) {
+            return ResponseEntity.ok(messages);
+        }
+        return ResponseEntity.notFound().build();
+    }
+
     @PostMapping("/chat")
     public ResponseEntity<ChatDto> createChat(@RequestBody ChatDto chatDto) {
         ChatDto createdChat = chatServiceImpl.createChat(chatDto);
