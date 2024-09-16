@@ -1,6 +1,5 @@
 package com.biglikuryer.bigliplus.api.chat.controller;
 
-/*
 import com.biglikuryer.bigliplus.dto.chat.ChatDto;
 import com.biglikuryer.bigliplus.model.chat.Chat;
 import com.biglikuryer.bigliplus.service.impl.chat.ChatServiceImpl;
@@ -16,16 +15,19 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @Controller
-@RequestMapping("/api/v3")
+@RequestMapping("/api")
 public class ChatController {
 
-    @Autowired
-    private ChatServiceImpl chatServiceImpl;
-
-    @Autowired
-    private SimpMessagingTemplate messagingTemplate;
+    private final ChatServiceImpl chatServiceImpl;
+    private final SimpMessagingTemplate messagingTemplate;
 
     // WebSocket Messaging
+
+    @Autowired
+    public ChatController(ChatServiceImpl chatServiceImpl, SimpMessagingTemplate messagingTemplate) {
+        this.chatServiceImpl = chatServiceImpl;
+        this.messagingTemplate = messagingTemplate;
+    }
 
     @MessageMapping("/sendMsg")
     public void sendMessage(@Payload ChatDto chatMessageDto) {
@@ -86,4 +88,3 @@ public class ChatController {
         return ResponseEntity.notFound().build();
     }
 }
-*/
