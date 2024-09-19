@@ -6,6 +6,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
@@ -24,9 +26,7 @@ public class OrderDto {
 
     private String orderMode;
 
-    private String cancelledCouriers;
-
-    private String cancelledDescription;
+    private List<Long> cancelledCouriers;
 
     private String pickupLocationTitle;
 

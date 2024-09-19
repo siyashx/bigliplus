@@ -89,10 +89,6 @@ public class OrderServiceImpl implements OrderServiceInter {
                 order.setCancelledCouriers(orderDto.getCancelledCouriers());
             }
 
-            if (orderDto.getCancelledDescription() != null) {
-                order.setCancelledDescription(orderDto.getCancelledDescription());
-            }
-
             if (orderDto.getDeliveryLength() != null) {
                 order.setDeliveryLength(orderDto.getDeliveryLength());
             }
