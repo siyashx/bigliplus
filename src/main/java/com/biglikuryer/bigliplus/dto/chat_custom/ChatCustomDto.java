@@ -1,4 +1,4 @@
-package com.biglikuryer.bigliplus.dto.chat_action;
+package com.biglikuryer.bigliplus.dto.chat_custom;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -9,15 +9,15 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Builder
 @Data
-public class ChatActionDto {
+public class ChatCustomDto {
 
     private Long id;
 
-    private Long actionId;
+    private Long orderId;
 
     private Long userId;
 
-    private Boolean isCustomer;
+    private Long courierId;
 
     private String message;
 

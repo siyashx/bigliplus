@@ -33,6 +33,8 @@ public class Restaurant {
 
     private Integer kg;
 
+    private Boolean isHidePhone;
+
     @Column(unique = true, nullable = false)
     private String phoneNumber;
 

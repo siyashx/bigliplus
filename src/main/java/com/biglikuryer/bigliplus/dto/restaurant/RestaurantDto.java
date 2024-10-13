@@ -28,6 +28,8 @@ public class RestaurantDto {
 
     private Integer kg;
 
+    private Boolean isHidePhone;
+
     private String phoneNumber;
 
     private String password;

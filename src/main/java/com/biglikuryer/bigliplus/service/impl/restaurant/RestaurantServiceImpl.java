@@ -101,6 +101,10 @@ public class RestaurantServiceImpl implements RestaurantServiceInter {
                 restaurant.setFakeOrderAttempt(restaurantDto.getFakeOrderAttempt());
             }
 
+            if (restaurantDto.getIsHidePhone() != null) {
+                restaurant.setIsHidePhone(restaurantDto.getIsHidePhone());
+            }
+
             if (restaurantDto.getLastActiveDate() != null) {
                 restaurant.setLastActiveDate(restaurantDto.getLastActiveDate());
             }
