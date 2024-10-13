@@ -51,8 +51,8 @@ public class ChatCustomController {
 
     // Id
     @GetMapping("/customChat/{customChatId}")
-    public ResponseEntity<ChatCustomDto> findChatCustomById(@PathVariable Long customId) {
-        ChatCustomDto chatCustomDto = chatCustomServiceImpl.getChatCustomById(customId);
+    public ResponseEntity<ChatCustomDto> findChatCustomById(@PathVariable Long customChatId) {
+        ChatCustomDto chatCustomDto = chatCustomServiceImpl.getChatCustomById(customChatId);
         if (chatCustomDto != null) {
             return ResponseEntity.ok(chatCustomDto);
         }
@@ -62,11 +62,11 @@ public class ChatCustomController {
     // Update
     @PutMapping("/customChat/{customChatId}")
     public ResponseEntity<?> updateChatCustom(
-            @PathVariable Long customId,
+            @PathVariable Long customChatId,
             @RequestBody ChatCustomDto chatCustomDto) {
 
         try {
-            ChatCustomDto updatedChatCustom = chatCustomServiceImpl.updateChatCustom(customId, chatCustomDto);
+            ChatCustomDto updatedChatCustom = chatCustomServiceImpl.updateChatCustom(customChatId, chatCustomDto);
             if (updatedChatCustom != null) {
                 return ResponseEntity.ok(updatedChatCustom);
             }
@@ -78,8 +78,8 @@ public class ChatCustomController {
 
     // Delete
     @DeleteMapping("/customChat/{customChatId}")
-    public ResponseEntity<String> deleteChatCustom(@PathVariable Long customId) {
-        boolean deleted = chatCustomServiceImpl.removeById(customId);
+    public ResponseEntity<String> deleteChatCustom(@PathVariable Long customChatId) {
+        boolean deleted = chatCustomServiceImpl.removeById(customChatId);
         if (deleted) {
             return ResponseEntity.ok("ChatCustom deleted successfully");
         }

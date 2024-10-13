@@ -19,6 +19,8 @@ public class ChatCustomDto {
 
     private Long courierId;
 
+    private Boolean isSendCustomer;
+
     private String message;
 
     private String time;

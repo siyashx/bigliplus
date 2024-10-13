@@ -61,6 +61,10 @@ public class ChatCustomServiceImpl implements ChatCustomServiceInter {
                 chatCustom.setCourierId(chatCustomDto.getCourierId());
             }
 
+            if (chatCustomDto.getIsSendCustomer() != null) {
+                chatCustom.setIsSendCustomer(chatCustomDto.getIsSendCustomer());
+            }
+
             if (chatCustomDto.getMessage() != null) {
                 chatCustom.setMessage(chatCustomDto.getMessage());
             }

@@ -24,6 +24,8 @@ public class ChatCustom {
 
     private Long courierId;
 
+    private Boolean isSendCustomer;
+
     private String message;
 
     private String time;
